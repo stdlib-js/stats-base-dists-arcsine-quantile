@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-23)
+## Unreleased (2025-06-30)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ A total of 2 issues were closed in this release:
 
 <details>
 
+-   [`7e24b8b`](https://github.com/stdlib-js/stdlib/commit/7e24b8ba0fff87a56584bb1a2fa106eb88267596) - **test:** slightly increase tolerances for passing tests _(by Philipp Burckhardt)_
 -   [`5b33d89`](https://github.com/stdlib-js/stdlib/commit/5b33d8941974b768fdb19f64809f60b58e7f16a1) - **chore:** address commit comments for commit `bbac3f9` [(#7422)](https://github.com/stdlib-js/stdlib/pull/7422) _(by Lokesh Ranjan)_
 -   [`bbac3f9`](https://github.com/stdlib-js/stdlib/commit/bbac3f9133c9399d95923f1c6395c976848846dc) - **feat:** add C implementation for `stats/base/dists/arcsine/quantile` [(#4374)](https://github.com/stdlib-js/stdlib/pull/4374) _(by Lokesh Ranjan, Philipp Burckhardt)_
 -   [`6ff59dd`](https://github.com/stdlib-js/stdlib/commit/6ff59dd9c1a20e141232e8081ca8606c87c73989) - **docs:** replace manual `for` loop in examples [(#6249)](https://github.com/stdlib-js/stdlib/pull/6249) _(by Karan Anand)_
