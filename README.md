@@ -65,13 +65,13 @@ for `0 <= p <= 1`, where `a` is the minimum support and `b` is the maximum suppo
 ## Usage
 
 ```javascript
-import quantile from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-quantile@esm/index.mjs';
+import quantile from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-quantile@v0.3.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-quantile@esm/index.mjs';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-quantile@v0.3.0-esm/index.mjs';
 ```
 
 #### quantile( p, a, b )
@@ -145,7 +145,7 @@ var y = myquantile( 0.8 );
 
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@esm/index.mjs';
 import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@esm/index.mjs';
-import quantile from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-quantile@esm/index.mjs';
+import quantile from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-quantile@v0.3.0-esm/index.mjs';
 
 var opts = {
     'dtype': 'float64'
