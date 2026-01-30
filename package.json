@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-base-dists-arcsine-quantile",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Arcsine distribution quantile function.",
   "license": "Apache-2.0",
   "author": {
@@ -50,7 +50,7 @@
     "@stdlib/utils-library-manifest": "^0.2.3"
   },
   "devDependencies": {
-    "@stdlib/console-log-each-map": "github:stdlib-js/console-log-each-map#main",
+    "@stdlib/console-log-each-map": "^0.1.0",
     "@stdlib/constants-float64-eps": "^0.2.2",
     "@stdlib/constants-float64-ninf": "^0.2.2",
     "@stdlib/constants-float64-pinf": "^0.2.2",
