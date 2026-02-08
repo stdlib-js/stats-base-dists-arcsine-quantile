@@ -58,25 +58,32 @@ for `0 <= p <= 1`, where `a` is the minimum support and `b` is the maximum suppo
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-arcsine-quantile
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import quantile from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-quantile@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-base-dists-arcsine-quantile/tags). For example,
-
-```javascript
-import quantile from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-quantile@v0.3.0-deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-quantile@deno/mod.js';
+var quantile = require( '@stdlib/stats-base-dists-arcsine-quantile' );
 ```
 
 #### quantile( p, a, b )
@@ -143,9 +150,9 @@ var y = myquantile( 0.8 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import quantile from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-arcsine-quantile@deno/mod.js';
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var quantile = require( '@stdlib/stats-base-dists-arcsine-quantile' );
 
 var opts = {
     'dtype': 'float64'
@@ -163,7 +170,101 @@ logEachMap( 'p: %0.4f, a: %0.4f, b: %0.4f, Q(p;a,b): %0.4f', p, a, b, quantile )
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/arcsine/quantile.h"
+```
+
+#### stdlib_base_dists_arcsine_quantile( p, a, b )
+
+Evaluates the quantile function for an arcsine distribution.
+
+```c
+double out = quantile( 0.8, 0.0, 1.0 );
+// returns ~0.905
+```
+
+The function accepts the following arguments:
+
+-   **p**: `[in] double` input value.
+-   **a**: `[in] double` minimum support.
+-   **b**: `[in] double` maximum support.
+
+```c
+double stdlib_base_dists_arcsine_quantile( const double p, const double a, const double b );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/arcsine/quantile.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+static double random_uniform( const double min, const double max ) {
+    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
+    return min + ( v*(max-min) );
+}
+
+int main(void){
+    double a;
+    double b;
+    double p;
+    double y;
+    int i;
+
+    for ( i = 0; i < 25; i++ ) {
+        p = random_uniform( 0.0, 1.0 );
+        a = random_uniform( -20.0, 0.0);
+        b = random_uniform( a, a+40.0 );
+        y = stdlib_base_dists_arcsine_quantile( p, a, b );
+        printf( "p: %lf, a: %lf, b: %lf, Q(p;a,b): %lf\n", p, a, b, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -190,7 +291,7 @@ logEachMap( 'p: %0.4f, a: %0.4f, b: %0.4f, Q(p;a,b): %0.4f', p, a, b, quantile )
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -220,8 +321,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/stats-base-dists-arcsine-quantile.svg
 [npm-url]: https://npmjs.org/package/@stdlib/stats-base-dists-arcsine-quantile
 
-[test-image]: https://github.com/stdlib-js/stats-base-dists-arcsine-quantile/actions/workflows/test.yml/badge.svg?branch=v0.3.0
-[test-url]: https://github.com/stdlib-js/stats-base-dists-arcsine-quantile/actions/workflows/test.yml?query=branch:v0.3.0
+[test-image]: https://github.com/stdlib-js/stats-base-dists-arcsine-quantile/actions/workflows/test.yml/badge.svg?branch=v0.3.1
+[test-url]: https://github.com/stdlib-js/stats-base-dists-arcsine-quantile/actions/workflows/test.yml?query=branch:v0.3.1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/stats-base-dists-arcsine-quantile/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/stats-base-dists-arcsine-quantile?branch=main
