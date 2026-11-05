@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-20)
+## Unreleased (2026-11-05)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`7349dff`](https://github.com/stdlib-js/stdlib/commit/7349dffeddd90289879f06e70acc1be8544af75b) - **style:** add missing whitespace [(#16507)](https://github.com/stdlib-js/stdlib/pull/16507) _(by Philipp Burckhardt)_
 -   [`7d2cca4`](https://github.com/stdlib-js/stdlib/commit/7d2cca43f33dd41f2e520231e4a345eb691f6361) - **test:** migrate `stats/base/dists/arcsine/quantile` to ULP-based assertions [(#15082)](https://github.com/stdlib-js/stdlib/pull/15082) _(by Aryan kumar)_
 -   [`dbe4c82`](https://github.com/stdlib-js/stdlib/commit/dbe4c820ea98330253b4054a5bc9b04b2293415b) - **docs:** propagate fixes to sibling packages [(#12677)](https://github.com/stdlib-js/stdlib/pull/12677) _(by Philipp Burckhardt, Athan Reines)_
 -   [`bccd3c3`](https://github.com/stdlib-js/stdlib/commit/bccd3c3ff447205446f7a41b19134620f8ce2642) - **docs:** follow-up fixes for commits merged to `develop` on 2026-06-03 [(#12511)](https://github.com/stdlib-js/stdlib/pull/12511) _(by Philipp Burckhardt)_
